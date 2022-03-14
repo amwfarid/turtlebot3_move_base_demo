@@ -3,12 +3,12 @@
   <name>turtlebot3_move_base_demo</name>
   <version>0.9.0</version>
   <description>
-    This is a demo package for simulating the use turtlebot3 with move_base for navigation. Largely based on codes from ROBOTIS.
+    This is a demo package for simulating the use turtlebot3 with move_base for navigation.
   </description>
   <license>Apache 2.0</license>
   <author>Ahmed Farid</author>
   <maintainer email="amw.farid@gmail.com">Ahmed Farid</maintainer>
-  <url type="repository">https://github.com/ROBOTIS-GIT/turtlebot3</url>
+  <url type="repository">https://github.com/amwfarid/turtlebot3_move_base_demo</url>
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>turtlebot3_navigation</exec_depend>
   <exec_depend>turtlebot3_gazebo</exec_depend>

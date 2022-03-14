@@ -2,6 +2,8 @@
 
 This is a repository to demonstrate the use of Turtlebot3 with the move_base framework. Gazebo/Rviz are used for visualization.
 
+<img src="./img/demo.png" height="450">
+
 ## Prerequisites
 
 This is a ROS package that depends on the following:
@@ -19,6 +21,10 @@ NOTE: This package was made and tested in ROS Noetic.
 
 2. `cd catkin_ws` then `catkin_make`
 
+3. `chmod +x catkin_ws/src/turtlebot3_move_base_demo/scripts/*.py `
+
+4. You might need to change the shebang line in the python scripts to match your used python interpreter.
+
 ## Usage
 
 Run the demo as follows:
@@ -29,6 +35,6 @@ To run the demo with dynamic obstacles, add the `add_obstacles` argument
 
 `roslaunch turtlebot3_move_base_demo demo.launch add_obstacles:=true`
 
-RGBD camera observations can also be recorded for constructing deep learning datasets, by adding the `record_rgbd` flag:
+RGBD camera observations can also be recorded (e.g. for constructing deep learning datasets), by adding the `record_rgbd` flag:
 
 `roslaunch turtlebot3_move_base_demo demo.launch add_obstacles:=true record_rgbd:=true` 

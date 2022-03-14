@@ -4,22 +4,25 @@
   <arg name="add_obstacles" default="false"/>
   <arg name="record_rgbd" default="false"/>
 
-<!--   Gazebo Module -->
+  <!--   Gazebo Module -->
   <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch">
     <arg name="model" value="$(arg model)" />
   </include>
 
-<!--   Navigation Module -->
+  <!--   Navigation Module -->
   <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
     <arg name="model" value="$(arg model)" />
   </include>
-  
+
+  <!--   Mission Planner Module -->
   <node pkg="turtlebot3_move_base_demo" name="mission_planner" type="MissionPlanner.py" cwd="node" />
 
+  <!--   Dynamic Obstacles Module -->
   <group if="$(arg add_obstacles)">
     <node pkg="turtlebot3_move_base_demo" name="obstacle_controller" type="ObstacleController.py" cwd="node" />
   </group>
 
+  <!--   Rosbag Recorder Module -->
   <group if="$(arg add_obstacles)">
     <node pkg="rosbag" name="record" type="record" cwd="node"
     args='record -O $(find turtlebot3_move_base_demo)/bag/rgbd.bag --duration=2m /camera/rgb/image_raw /camera/depth/image_raw' />
