@@ -23,7 +23,7 @@
   </group>
 
   <!--   Rosbag Recorder Module -->
-  <group if="$(arg add_obstacles)">
+  <group if="$(arg record_rgbd)">
     <node pkg="rosbag" name="record" type="record" cwd="node"
     args='record -O $(find turtlebot3_move_base_demo)/bag/rgbd.bag --duration=2m /camera/rgb/image_raw /camera/depth/image_raw' />
   </group>
