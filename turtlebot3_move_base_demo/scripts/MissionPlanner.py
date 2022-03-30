@@ -1,4 +1,4 @@
-#!/home/farid/realsense_ros/venv/bin/python
+#!//bin/python
 
 import random
 import rospy

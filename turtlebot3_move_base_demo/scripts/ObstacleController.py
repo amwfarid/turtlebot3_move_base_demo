@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/home/farid/realsense_ros/venv/bin/python
 
 import rospy
 import time
